@@ -1,6 +1,6 @@
 {
   "name": "wait-then",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Utility function that returns a promise that resolves after x ms",
   "main": "lib/index.js",
   "directories": {
