@@ -1,4 +1,18 @@
 # wait-then
+
+[![GitHub version][github-img]][github-url]
+[![NPM Version][npm-img]][npm-url]
+[![Coverage Status][coveralls-img]][coveralls-url]
+
+[![Deps][deps-img]][deps-url]
+[![Dev Deps][devDeps-img]][deps-url]
+[![Peer Deps][peerDeps-img]][deps-url]
+
+[![NPM Downloads][downloads-img]][npm-url]
+[![GitHub stars][stars-img]][github-url]
+[![GitHub forks][forks-img]][github-url]
+[![GitHub issues][issues-img]][github-url]
+
 Utility function that returns a promise that resolves after x ms
 
 Can be used as a yieldable with [co](https://github.com/tj/co) or in [koa](koajs.com).
@@ -28,3 +42,18 @@ co(function *() {
 The generator function passed into `co`  can be yielded in a middleware in `koa`.
 
 Note: This relies on the existence of a [global `Promise` object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) as defined in the ECMAScript 6 (Harmony) proposal.
+
+[npm-img]: http://img.shields.io/npm/v/wait-then.svg
+[downloads-img]: http://img.shields.io/npm/dm/wait-then.svg
+[npm-url]: https://www.npmjs.org/package/wait-then
+[github-img]: https://badge.fury.io/gh/kunalgolani%2Fwait-then.svg
+[stars-img]: https://img.shields.io/github/stars/kunalgolani/wait-then.svg
+[forks-img]: https://img.shields.io/github/forks/kunalgolani/wait-then.svg
+[issues-img]: https://img.shields.io/github/issues-raw/kunalgolani/wait-then.svg
+[github-url]: https://github.com/kunalgolani/wait-then
+[coveralls-img]: https://coveralls.io/repos/kunalgolani/wait-then/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/r/kunalgolani/wait-then?branch=master
+[deps-img]: https://img.shields.io/david/kunalgolani/wait-then.svg
+[devDeps-img]: https://img.shields.io/david/dev/kunalgolani/wait-then.svg
+[peerDeps-img]: https://img.shields.io/david/peer/kunalgolani/wait-then.svg
+[deps-url]: https://github.com/kunalgolani/wait-then/blob/master/package.json
