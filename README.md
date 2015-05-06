@@ -41,7 +41,9 @@ co(function *() {
 
 The generator function passed into `co`  can be yielded in a middleware in `koa`.
 
-Note: This relies on the existence of a [global `Promise` object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) as defined in the ECMAScript 6 (Harmony) proposal.
+__Note__: This relies on the existence of a global [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) object as defined in the ECMAScript 6 (Harmony) proposal.
+
+How this differs from [`co-sleep`](https://github.com/eugeneware/co-sleep) and [`co-wait`](https://github.com/juliangruber/co-wait) is that both of them use _thunks_, support for which is set to be [deprecated](https://github.com/tj/co#thunks). `wait-then` instead uses _Promises_, which are also [yieldable](https://github.com/tj/co#yieldables).
 
 [npm-img]: http://img.shields.io/npm/v/wait-then.svg
 [downloads-img]: http://img.shields.io/npm/dm/wait-then.svg
