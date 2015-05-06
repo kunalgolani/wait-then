@@ -1,6 +1,7 @@
 {
 	"node": true,
 	"expr": true,
+	"esnext": true,
 	"globals" : {
 		"Promise"    : false,
 		/* MOCHA */
