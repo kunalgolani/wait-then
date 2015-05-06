@@ -1,0 +1,29 @@
+{
+  "name": "wait-then",
+  "version": "1.0.0",
+  "description": "Utility function that returns a promise that resolves after x ms",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kunalgolani/wait-then.git"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  },
+  "keywords": [
+    "co",
+    "wait",
+    "then",
+    "promise",
+    "sleep"
+  ],
+  "author": "kunalgolani@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kunalgolani/wait-then/issues"
+  },
+  "homepage": "https://github.com/kunalgolani/wait-then"
+}
