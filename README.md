@@ -26,3 +26,5 @@ co(function *() {
 ```
 
 The generator function passed into `co`  can be yielded in a middleware in `koa`.
+
+Note: This relies on the existence of a [global `Promise` object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) as defined in the ECMAScript 6 (Harmony) proposal.

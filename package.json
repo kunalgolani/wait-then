@@ -2,9 +2,15 @@
   "name": "wait-then",
   "version": "1.0.0",
   "description": "Utility function that returns a promise that resolves after x ms",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "jshint .",
+    "test": "mocha",
+    "coverage": "istanbul cover _mocha && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && open ./coverage/lcov-report/index.html",
+    "prepublish": "npm run lint && npm test && npm run coverage"
   },
   "repository": {
     "type": "git",
@@ -25,5 +31,13 @@
   "bugs": {
     "url": "https://github.com/kunalgolani/wait-then/issues"
   },
-  "homepage": "https://github.com/kunalgolani/wait-then"
+  "homepage": "https://github.com/kunalgolani/wait-then",
+  "devDependencies": {
+    "chai": "~2.1.2",
+    "co": "^4.5.4",
+    "coveralls": "~2.11.2",
+    "istanbul": "~0.3.13",
+    "jshint": "~2.6.3",
+    "mocha": "~2.2.1"
+  }
 }
