@@ -33,11 +33,11 @@
   },
   "homepage": "https://github.com/kunalgolani/wait-then",
   "devDependencies": {
-    "chai": "~2.3.0",
-    "co": "~4.5.4",
+    "chai": "~3.4.0",
+    "co": "~4.6.0",
     "coveralls": "~2.11.2",
-    "istanbul": "~0.3.13",
+    "istanbul": "~0.4.0",
     "jshint": "~2.7.0",
-    "mocha": "~2.2.4"
+    "mocha": "~2.3.0"
   }
 }
