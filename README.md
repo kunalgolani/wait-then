@@ -20,22 +20,36 @@ Can be used as a yieldable with [co](https://github.com/tj/co) or in [koa](koajs
 Basic example:
 
 ```javascript
-var wait = require('wait-then');
+var wait = require('wait-then'),
+    timeout = wait.timeout;
 
 wait(2000).then(function() {
     console.log('This is logged after 2 seconds');
 });
+
+timeout(2000).catch(e) {
+    console.log('This is logged after 2 seconds');
+}
 ```
 
 Example with `co`:
 
 ```javascript
 var wait = require('wait-then'),
+    timeout = wait.timeout,
     co = require('co');
 
 co(function *() {
     yield wait(1000);
     console.log('This is logged after 1 second');
+});
+
+co(function *() {
+    try {
+        yield timeout(1000);
+    } catch (e) {
+        console.log('This is logged after 1 second');
+    }
 });
 ```
 
