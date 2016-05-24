@@ -15,6 +15,10 @@
 
 Utility function that returns a promise that resolves after x ms
 
+```bash
+npm install --save wait-then
+```
+
 Can be used as a yieldable with [co](https://github.com/tj/co) or in [koa](koajs.com).
 
 Basic example:
