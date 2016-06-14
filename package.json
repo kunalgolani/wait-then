@@ -8,6 +8,7 @@
   },
   "scripts": {
     "lint": "jshint .",
+    "precommit": "jshint .",
     "test": "mocha",
     "coverage": "istanbul cover _mocha && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && open ./coverage/lcov-report/index.html",
     "prepublish": "npm run lint && npm test && npm run coverage"
@@ -36,6 +37,7 @@
     "chai": "~3.5.0",
     "co": "~4.6.0",
     "coveralls": "~2.11.2",
+    "husky": "~0.11.4",
     "istanbul": "~0.4.0",
     "jshint": "~2.9.0",
     "mocha": "~2.4.0"
