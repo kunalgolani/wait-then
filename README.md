@@ -13,18 +13,18 @@
 [![GitHub forks][forks-img]][github-url]
 [![GitHub issues][issues-img]][github-url]
 
-Utility function that returns a promise that resolves after x ms
+Utility function that returns a promise that resolves after _x_ ms
 
 ```bash
 npm install --save wait-then
 ```
 
-Can be used as a yieldable with [co](https://github.com/tj/co) or in [koa](koajs.com).
+Can be awaited in [async functions](https://ponyfoo.com/articles/understanding-javascript-async-await), or as a yieldable with [co](https://github.com/tj/co) or in [koa](koajs.com).
 
 Basic example:
 
 ```javascript
-var wait = require('wait-then'),
+const wait = require('wait-then'),
     timeout = wait.timeout;
 
 wait(2000).then(function() {
@@ -33,13 +33,47 @@ wait(2000).then(function() {
 
 timeout(2000).catch(e) {
     console.log('This is logged after 2 seconds');
+};
+```
+
+Example with `Promise.race` for simple timeouts:
+
+```javascript
+const timeout = require('wait-then').timeout;
+
+async function getData(key) {
+    try {
+        await Promise.race(dataLoader(key), timeout(1000));
+    } catch (e) {
+        console.error(e);
+    }
 }
 ```
 
-Example with `co`:
+Basic example with `async function` and `await`:
 
 ```javascript
-var wait = require('wait-then'),
+const wait = require('wait-then'),
+    timeout = wait.timeout;
+
+(async function () {
+    await wait(1000);
+    console.log('This is logged after 1 second');
+})();
+
+(async function () {
+    try {
+        await timeout(1000);
+    } catch (e) {
+        console.log('This is logged after 1 second');
+    }
+})();
+```
+
+Basic example with `co`:
+
+```javascript
+const wait = require('wait-then'),
     timeout = wait.timeout,
     co = require('co');
 

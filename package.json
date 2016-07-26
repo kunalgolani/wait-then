@@ -22,6 +22,8 @@
   },
   "keywords": [
     "co",
+    "async",
+    "await",
     "wait",
     "then",
     "promise",
